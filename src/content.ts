@@ -14,6 +14,7 @@ export const summary =
 export const experience = [
   {
     company: 'Infra-One',
+    url: 'https://www.infra.one/',
     role: 'Elixir Developer',
     location: 'Vienna, Austria',
     period: 'Feb 2025 – Sep 2026',
@@ -26,6 +27,7 @@ export const experience = [
   },
   {
     company: 'Infinit-O',
+    url: 'https://www.infinit-o.com/',
     role: 'Elixir Senior Developer',
     location: 'Pasay City, Philippines',
     period: 'Feb 2023 – Feb 2025',
@@ -38,6 +40,7 @@ export const experience = [
   },
   {
     company: 'Bramble (brmbl.io)',
+    url: 'https://www.brmbl.io/',
     role: 'Software Engineer',
     location: 'United States (Remote)',
     period: 'Aug 2021 – Nov 2022',
@@ -49,6 +52,7 @@ export const experience = [
   },
   {
     company: 'Mashup Garage',
+    url: 'https://www.mashupgarage.com/',
     role: 'Software Developer',
     location: 'Quezon City, Philippines',
     period: 'Jun 2021 – Aug 2021',
@@ -58,6 +62,7 @@ export const experience = [
   },
   {
     company: 'Medilink Network Inc.',
+    url: 'https://www.medilink.com.ph/',
     role: 'Software Engineer III',
     location: 'Makati City, Philippines',
     period: 'Aug 2020 – Jun 2021',
@@ -71,6 +76,7 @@ export const experience = [
   },
   {
     company: 'Medilink Network Inc.',
+    url: 'https://www.medilink.com.ph/',
     role: 'Software Engineer II',
     location: 'Makati City, Philippines',
     period: 'Mar 2020 – Aug 2020',
@@ -82,6 +88,7 @@ export const experience = [
   },
   {
     company: 'Medilink Network Inc.',
+    url: 'https://www.medilink.com.ph/',
     role: 'Software Engineer I',
     location: 'Makati City, Philippines',
     period: 'Jun 2018 – Mar 2020',
@@ -148,6 +155,7 @@ export const skills = [
 
 export const education = {
   school: 'University of Perpetual Help System-DALTA',
+  url: 'https://perpetualdalta.edu.ph/new/las-pinas-campus-home/',
   degree: 'Bachelor of Science in Computer Engineering',
   date: 'Apr 2018',
   location: 'Las Piñas City, Metro Manila, Philippines',

@@ -167,7 +167,14 @@ function App() {
                         {job.role}
                       </h3>
                       <p className="mt-1 text-base font-medium text-accent-deep">
-                        {job.company}
+                        <a
+                          href={job.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline-offset-4 transition hover:underline"
+                        >
+                          {job.company}
+                        </a>
                         <span className="text-muted"> · {job.location}</span>
                       </p>
                     </div>
@@ -205,7 +212,14 @@ function App() {
                 {education.degree}
               </h3>
               <p className="mt-2 text-base font-medium text-accent-deep">
-                {education.school}
+                <a
+                  href={education.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-4 transition hover:underline"
+                >
+                  {education.school}
+                </a>
               </p>
               <p className="mt-2 text-base text-ink-soft">
                 {education.location}
