@@ -64,7 +64,7 @@ function App() {
           aria-label="Introduction"
         >
           <div
-            className="animate-drift absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,#c5d9d1_0%,transparent_50%),radial-gradient(ellipse_at_85%_15%,#dce8e3_0%,transparent_45%),linear-gradient(160deg,#f6f4ef_0%,#e8efe9_42%,#d4e2db_100%)]"
+            className="animate-drift absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,#e8e8e8_0%,transparent_50%),radial-gradient(ellipse_at_85%_15%,#f0f0f0_0%,transparent_45%),linear-gradient(160deg,#ffffff_0%,#f5f5f5_42%,#ececec_100%)]"
             aria-hidden="true"
           />
           <div
