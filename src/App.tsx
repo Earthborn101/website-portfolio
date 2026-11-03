@@ -1,4 +1,24 @@
 import {
+  ArrowUpRightIcon,
+  BuildingsIcon,
+  CalendarBlankIcon,
+  CloudIcon,
+  CodeIcon,
+  DatabaseIcon,
+  EnvelopeSimpleIcon,
+  GitBranchIcon,
+  GraduationCapIcon,
+  HardDrivesIcon,
+  KanbanIcon,
+  LinkedinLogoIcon,
+  MapPinIcon,
+  PaperPlaneTiltIcon,
+  PhoneIcon,
+  SparkleIcon,
+  WrenchIcon,
+} from '@phosphor-icons/react'
+import type { Icon } from '@phosphor-icons/react'
+import {
   education,
   experience,
   identity,
@@ -14,6 +34,17 @@ const navLinks = [
   { href: '#education', label: 'Education' },
   { href: '#contact', label: 'Contact' },
 ]
+
+const skillIcons: Record<string, Icon> = {
+  'Programming Languages': CodeIcon,
+  'Backend & Web': HardDrivesIcon,
+  'Databases & Data': DatabaseIcon,
+  'Distributed Systems': GitBranchIcon,
+  'Cloud & DevOps': CloudIcon,
+  'Tools & Frameworks': WrenchIcon,
+  'AI & Automation': SparkleIcon,
+  Methodologies: KanbanIcon,
+}
 
 function App() {
   const pageRef = useReveal<HTMLDivElement>()
@@ -49,8 +80,9 @@ function App() {
           </ul>
           <a
             href="#contact"
-            className="text-sm font-semibold text-accent transition hover:text-accent-deep md:hidden"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition hover:text-accent-deep md:hidden"
           >
+            <EnvelopeSimpleIcon aria-hidden weight="regular" className="size-4" />
             Contact
           </a>
         </nav>
@@ -86,16 +118,18 @@ function App() {
             <div className="animate-fade-up-delay-3 mt-7 flex flex-wrap items-center gap-3 sm:mt-9 sm:gap-4">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center border border-accent bg-accent px-5 py-2.5 text-sm font-semibold text-white transition hover:border-accent-deep hover:bg-accent-deep sm:px-6 sm:py-3"
+                className="inline-flex items-center justify-center gap-2 border border-accent bg-accent px-5 py-2.5 text-sm font-semibold text-white transition hover:border-accent-deep hover:bg-accent-deep sm:px-6 sm:py-3"
               >
+                <PaperPlaneTiltIcon aria-hidden weight="bold" className="size-4" />
                 Contact
               </a>
               <a
                 href={identity.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border border-ink/20 bg-transparent px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-accent hover:text-accent sm:px-6 sm:py-3"
+                className="inline-flex items-center justify-center gap-2 border border-ink/20 bg-transparent px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-accent hover:text-accent sm:px-6 sm:py-3"
               >
+                <LinkedinLogoIcon aria-hidden weight="regular" className="size-4" />
                 LinkedIn
               </a>
             </div>
@@ -114,7 +148,10 @@ function App() {
             <p className="mt-8 max-w-3xl text-lg leading-relaxed text-ink-soft">
               {summary}
             </p>
-            <p className="mt-6 text-base text-muted">{identity.location}</p>
+            <p className="mt-6 inline-flex items-center gap-2 text-base text-muted">
+              <MapPinIcon aria-hidden weight="regular" className="size-4 shrink-0" />
+              {identity.location}
+            </p>
           </div>
         </section>
 
@@ -128,16 +165,24 @@ function App() {
               Tools and domains I work in.
             </h2>
             <div className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-              {skills.map((group) => (
-                <div key={group.label}>
-                  <h3 className="font-display text-base font-semibold text-accent-deep">
-                    {group.label}
-                  </h3>
-                  <p className="mt-3 text-base leading-relaxed text-ink-soft">
-                    {group.items.join(' · ')}
-                  </p>
-                </div>
-              ))}
+              {skills.map((group) => {
+                const SkillIcon = skillIcons[group.label] ?? WrenchIcon
+                return (
+                  <div key={group.label}>
+                    <h3 className="inline-flex items-center gap-2 font-display text-base font-semibold text-accent-deep">
+                      <SkillIcon
+                        aria-hidden
+                        weight="regular"
+                        className="size-4 shrink-0 text-ink"
+                      />
+                      {group.label}
+                    </h3>
+                    <p className="mt-3 text-base leading-relaxed text-ink-soft">
+                      {group.items.join(' · ')}
+                    </p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -171,14 +216,29 @@ function App() {
                           href={job.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="underline-offset-4 transition hover:underline"
+                          className="inline-flex items-center gap-1 underline-offset-4 transition hover:underline"
                         >
+                          <BuildingsIcon
+                            aria-hidden
+                            weight="regular"
+                            className="size-4 shrink-0"
+                          />
                           {job.company}
+                          <ArrowUpRightIcon
+                            aria-hidden
+                            weight="bold"
+                            className="size-3.5 shrink-0 opacity-60"
+                          />
                         </a>
                         <span className="text-muted"> · {job.location}</span>
                       </p>
                     </div>
-                    <p className="shrink-0 text-sm font-medium text-muted sm:text-right">
+                    <p className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-muted sm:justify-end">
+                      <CalendarBlankIcon
+                        aria-hidden
+                        weight="regular"
+                        className="size-3.5 shrink-0"
+                      />
                       {job.period}
                     </p>
                   </div>
@@ -208,23 +268,41 @@ function App() {
               Academic foundation.
             </h2>
             <div className="mt-10 max-w-2xl">
-              <h3 className="font-display text-xl font-semibold text-ink">
-                {education.degree}
+              <h3 className="inline-flex items-start gap-2 font-display text-xl font-semibold text-ink">
+                <GraduationCapIcon
+                  aria-hidden
+                  weight="regular"
+                  className="mt-1 size-5 shrink-0"
+                />
+                <span>{education.degree}</span>
               </h3>
               <p className="mt-2 text-base font-medium text-accent-deep">
                 <a
                   href={education.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline-offset-4 transition hover:underline"
+                  className="inline-flex items-center gap-1 underline-offset-4 transition hover:underline"
                 >
                   {education.school}
+                  <ArrowUpRightIcon
+                    aria-hidden
+                    weight="bold"
+                    className="size-3.5 shrink-0 opacity-60"
+                  />
                 </a>
               </p>
-              <p className="mt-2 text-base text-ink-soft">
+              <p className="mt-2 inline-flex items-center gap-2 text-base text-ink-soft">
+                <MapPinIcon aria-hidden weight="regular" className="size-4 shrink-0" />
                 {education.location}
               </p>
-              <p className="mt-1 text-sm text-muted">{education.date}</p>
+              <p className="mt-1 inline-flex items-center gap-1.5 text-sm text-muted">
+                <CalendarBlankIcon
+                  aria-hidden
+                  weight="regular"
+                  className="size-3.5 shrink-0"
+                />
+                {education.date}
+              </p>
             </div>
           </div>
         </section>
@@ -245,25 +323,31 @@ function App() {
             <div className="mt-10 flex flex-col gap-4 text-base sm:gap-3">
               <a
                 href={`mailto:${identity.email}`}
-                className="font-medium text-accent transition hover:text-accent-deep"
+                className="inline-flex items-center gap-2.5 font-medium text-accent transition hover:text-accent-deep"
               >
+                <EnvelopeSimpleIcon aria-hidden weight="regular" className="size-5 shrink-0" />
                 {identity.email}
               </a>
               <a
                 href={`tel:${identity.phone.replace(/[^\d+]/g, '')}`}
-                className="font-medium text-ink-soft transition hover:text-accent"
+                className="inline-flex items-center gap-2.5 font-medium text-ink-soft transition hover:text-accent"
               >
+                <PhoneIcon aria-hidden weight="regular" className="size-5 shrink-0" />
                 {identity.phone}
               </a>
               <a
                 href={identity.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-ink-soft transition hover:text-accent"
+                className="inline-flex items-center gap-2.5 font-medium text-ink-soft transition hover:text-accent"
               >
+                <LinkedinLogoIcon aria-hidden weight="regular" className="size-5 shrink-0" />
                 linkedin.com/in/ryan-christopher-adiao
               </a>
-              <p className="text-muted">{identity.location}</p>
+              <p className="inline-flex items-center gap-2.5 text-muted">
+                <MapPinIcon aria-hidden weight="regular" className="size-5 shrink-0" />
+                {identity.location}
+              </p>
             </div>
           </div>
         </section>
