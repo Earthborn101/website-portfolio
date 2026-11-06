@@ -99,7 +99,7 @@ function App() {
             aria-hidden="true"
           />
           <div
-            className="pointer-events-none absolute bottom-0 right-0 top-20 w-[46%] sm:top-24 sm:w-[40%] lg:w-[38%]"
+            className="animate-fade-up-delay-1 pointer-events-none absolute bottom-0 right-0 top-20 w-[46%] sm:top-24 sm:w-[40%] lg:w-[38%]"
             aria-hidden="true"
           >
             <img
