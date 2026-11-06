@@ -103,7 +103,7 @@ function App() {
             aria-hidden="true"
           >
             <img
-              src="/ryan-portrait.png"
+              src="/ryan-portrait.png?v=2"
               alt=""
               className="animate-drift h-full w-full object-contain object-bottom"
             />
