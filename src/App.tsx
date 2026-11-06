@@ -63,7 +63,7 @@ function App() {
             href="#top"
             className="font-display text-sm font-semibold tracking-wide text-ink/80 transition hover:text-accent"
           >
-            RA
+            Ryan Adiao
           </a>
           <ul className="hidden items-center gap-7 md:flex">
             {navLinks.map((link) => (
@@ -99,22 +99,22 @@ function App() {
             aria-hidden="true"
           />
           <div
-            className="pointer-events-none absolute inset-y-0 right-0 w-full sm:w-[62%] lg:w-[55%]"
+            className="pointer-events-none absolute bottom-0 right-0 h-[55%] w-[48%] max-w-sm sm:h-[60%] sm:w-[40%] sm:max-w-md lg:h-[65%] lg:max-w-lg"
             aria-hidden="true"
           >
             <img
               src="/ryan-portrait.png"
               alt=""
-              className="animate-drift h-full w-full object-contain object-bottom opacity-90 sm:object-right-bottom"
+              className="animate-drift h-full w-full object-contain object-bottom opacity-90"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/70 to-transparent sm:via-surface/40" />
-            <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-surface to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/50 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-surface to-transparent" />
           </div>
 
           <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end px-5 pb-14 pt-24 sm:px-8 sm:pb-20 sm:pt-32">
             <div className="max-w-xl lg:max-w-2xl">
               <p className="animate-fade-up font-display text-[2.75rem] font-extrabold leading-[0.95] tracking-tight text-ink sm:text-6xl md:text-7xl lg:text-8xl">
-                {identity.name}
+                Hello, I am Ryan
               </p>
               <h1 className="animate-fade-up-delay-1 mt-4 max-w-2xl font-display text-lg font-semibold leading-snug text-accent-deep sm:mt-5 sm:text-2xl">
                 {identity.title}
