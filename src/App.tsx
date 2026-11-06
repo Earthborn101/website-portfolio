@@ -91,7 +91,7 @@ function App() {
         {/* Hero — one composition */}
         <section
           id="top"
-          className="relative flex min-h-[70svh] items-center overflow-hidden sm:min-h-[75svh]"
+          className="relative flex min-h-[70svh] items-start overflow-hidden sm:min-h-[75svh]"
           aria-label="Introduction"
         >
           <div
@@ -109,7 +109,7 @@ function App() {
             />
           </div>
 
-          <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 py-20 sm:px-8 sm:py-24">
+          <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-start px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-40">
             <div className="max-w-xl lg:max-w-2xl">
               <p className="animate-fade-up font-display text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl md:text-5xl">
                 Hello, I am Ryan
