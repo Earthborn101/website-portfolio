@@ -105,10 +105,8 @@ function App() {
             <img
               src="/ryan-portrait.png"
               alt=""
-              className="animate-drift h-full w-full object-contain object-bottom opacity-90"
+              className="animate-drift h-full w-full object-contain object-bottom"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/50 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-surface to-transparent" />
           </div>
 
           <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 py-20 sm:px-8 sm:py-24">
