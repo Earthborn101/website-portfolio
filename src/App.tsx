@@ -13,7 +13,6 @@ import {
   LinkedinLogoIcon,
   MapPinIcon,
   PaperPlaneTiltIcon,
-  PhoneIcon,
   SparkleIcon,
   WrenchIcon,
 } from '@phosphor-icons/react'
@@ -317,8 +316,7 @@ function App() {
               Get in touch.
             </h2>
             <p className="mt-5 max-w-xl text-lg text-ink-soft">
-              Based in {identity.location}. Reach out by email, phone, or
-              LinkedIn.
+              Based in {identity.location}. Reach out by email or LinkedIn.
             </p>
             <div className="mt-10 flex flex-col gap-4 text-base sm:gap-3">
               <a
@@ -327,13 +325,6 @@ function App() {
               >
                 <EnvelopeSimpleIcon aria-hidden weight="regular" className="size-5 shrink-0" />
                 {identity.email}
-              </a>
-              <a
-                href={`tel:${identity.phone.replace(/[^\d+]/g, '')}`}
-                className="inline-flex items-center gap-2.5 font-medium text-ink-soft transition hover:text-accent"
-              >
-                <PhoneIcon aria-hidden weight="regular" className="size-5 shrink-0" />
-                {identity.phone}
               </a>
               <a
                 href={identity.linkedIn}
