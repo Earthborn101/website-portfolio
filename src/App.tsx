@@ -103,9 +103,9 @@ function App() {
             aria-hidden="true"
           >
             <img
-              src="/ryan-portrait.png?v=4"
+              src="/ryan-portrait.png?v=6"
               alt=""
-              className="h-full w-full object-cover object-top [mask-image:linear-gradient(to_bottom,black_72%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_72%,transparent_100%)]"
+              className="h-full w-full object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)]"
             />
           </div>
 
