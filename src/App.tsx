@@ -91,30 +91,20 @@ function App() {
         {/* Hero — one composition */}
         <section
           id="top"
-          className="relative flex min-h-[70svh] items-start overflow-hidden sm:min-h-[75svh]"
+          className="relative min-h-[70svh] overflow-hidden sm:min-h-[75svh]"
           aria-label="Introduction"
         >
           <div
             className="absolute inset-0 bg-[linear-gradient(160deg,#ffffff_0%,#f5f5f5_45%,#ececec_100%)]"
             aria-hidden="true"
           />
-          <div
-            className="animate-fade-up-delay-1 pointer-events-none absolute bottom-0 right-0 top-20 w-[46%] sm:top-24 sm:w-[40%] lg:w-[38%]"
-            aria-hidden="true"
-          >
-            <img
-              src={`${import.meta.env.BASE_URL}ryan-portrait.png?v=6`}
-              alt=""
-              className="h-full w-full object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)]"
-            />
-          </div>
 
-          <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-start px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-40">
-            <div className="max-w-xl lg:max-w-2xl">
+          <div className="relative z-10 mx-auto grid min-h-[70svh] w-full max-w-6xl grid-cols-1 gap-8 px-5 pb-14 pt-28 sm:min-h-[75svh] sm:grid-cols-[minmax(0,1.15fr)_minmax(11rem,38%)] sm:items-stretch sm:gap-6 sm:px-8 sm:pb-16 sm:pt-36 lg:grid-cols-[minmax(0,1.25fr)_minmax(13rem,36%)] lg:gap-8 lg:pt-40">
+            <div className="flex min-w-0 flex-col justify-start">
               <p className="animate-fade-up font-display text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl md:text-5xl">
                 Hello, I am Ryan
               </p>
-              <h1 className="animate-fade-up-delay-1 mt-3 max-w-2xl font-display text-base font-semibold leading-snug text-accent-deep sm:text-xl">
+              <h1 className="animate-fade-up-delay-1 mt-3 font-display text-base font-semibold leading-snug text-accent-deep sm:text-xl">
                 {identity.title}
               </h1>
               <p className="animate-fade-up-delay-2 mt-3 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
@@ -139,6 +129,17 @@ function App() {
                   LinkedIn
                 </a>
               </div>
+            </div>
+
+            <div
+              className="animate-fade-up-delay-1 pointer-events-none relative mx-auto h-72 w-full max-w-xs sm:mx-0 sm:h-auto sm:max-w-none sm:min-h-[calc(70svh-9rem)]"
+              aria-hidden="true"
+            >
+              <img
+                src={`${import.meta.env.BASE_URL}ryan-portrait.png?v=6`}
+                alt=""
+                className="absolute inset-0 h-full w-full object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)]"
+              />
             </div>
           </div>
         </section>
