@@ -299,18 +299,20 @@ function App() {
                   />
                 </a>
               </p>
-              <p className="mt-2 inline-flex items-center gap-2 text-base text-ink-soft">
-                <MapPinIcon aria-hidden weight="regular" className="size-4 shrink-0" />
-                {education.location}
-              </p>
-              <p className="mt-1 inline-flex items-center gap-1.5 text-sm text-muted">
-                <CalendarBlankIcon
-                  aria-hidden
-                  weight="regular"
-                  className="size-3.5 shrink-0"
-                />
-                {education.date}
-              </p>
+              <div className="mt-2 flex flex-wrap items-center gap-x-5 gap-y-1">
+                <p className="inline-flex items-center gap-2 text-base text-ink-soft">
+                  <MapPinIcon aria-hidden weight="regular" className="size-4 shrink-0" />
+                  {education.location}
+                </p>
+                <p className="inline-flex items-center gap-1.5 text-sm text-muted">
+                  <CalendarBlankIcon
+                    aria-hidden
+                    weight="regular"
+                    className="size-3.5 shrink-0"
+                  />
+                  {education.date}
+                </p>
+              </div>
             </div>
           </div>
         </section>
