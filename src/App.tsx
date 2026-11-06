@@ -99,13 +99,13 @@ function App() {
             aria-hidden="true"
           />
           <div
-            className="pointer-events-none absolute bottom-0 right-0 top-20 w-[42%] max-w-xs sm:top-24 sm:w-[36%] sm:max-w-sm lg:max-w-md"
+            className="pointer-events-none absolute bottom-0 right-0 top-20 w-[46%] sm:top-24 sm:w-[40%] lg:w-[38%]"
             aria-hidden="true"
           >
             <img
-              src="/ryan-portrait.png?v=3"
+              src="/ryan-portrait.png?v=4"
               alt=""
-              className="animate-drift h-full w-full object-contain object-bottom"
+              className="h-full w-full object-cover object-top [mask-image:linear-gradient(to_bottom,black_72%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_72%,transparent_100%)]"
             />
           </div>
 
