@@ -103,7 +103,7 @@ function App() {
             aria-hidden="true"
           >
             <img
-              src="/ryan-portrait.png?v=6"
+              src={`${import.meta.env.BASE_URL}ryan-portrait.png?v=6`}
               alt=""
               className="h-full w-full object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)]"
             />
