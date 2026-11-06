@@ -91,7 +91,7 @@ function App() {
         {/* Hero — one composition */}
         <section
           id="top"
-          className="relative flex min-h-svh items-end overflow-hidden"
+          className="relative flex min-h-[70svh] items-center overflow-hidden sm:min-h-[75svh]"
           aria-label="Introduction"
         >
           <div
@@ -99,7 +99,7 @@ function App() {
             aria-hidden="true"
           />
           <div
-            className="pointer-events-none absolute bottom-0 right-0 h-[55%] w-[48%] max-w-sm sm:h-[60%] sm:w-[40%] sm:max-w-md lg:h-[65%] lg:max-w-lg"
+            className="pointer-events-none absolute bottom-0 right-0 h-[50%] w-[42%] max-w-xs sm:h-[55%] sm:w-[36%] sm:max-w-sm lg:max-w-md"
             aria-hidden="true"
           >
             <img
@@ -108,22 +108,22 @@ function App() {
               className="animate-drift h-full w-full object-contain object-bottom opacity-90"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/50 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-surface to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-surface to-transparent" />
           </div>
 
-          <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end px-5 pb-14 pt-24 sm:px-8 sm:pb-20 sm:pt-32">
+          <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 py-20 sm:px-8 sm:py-24">
             <div className="max-w-xl lg:max-w-2xl">
-              <p className="animate-fade-up font-display text-[2.75rem] font-extrabold leading-[0.95] tracking-tight text-ink sm:text-6xl md:text-7xl lg:text-8xl">
+              <p className="animate-fade-up font-display text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl md:text-5xl">
                 Hello, I am Ryan
               </p>
-              <h1 className="animate-fade-up-delay-1 mt-4 max-w-2xl font-display text-lg font-semibold leading-snug text-accent-deep sm:mt-5 sm:text-2xl">
+              <h1 className="animate-fade-up-delay-1 mt-3 max-w-2xl font-display text-base font-semibold leading-snug text-accent-deep sm:text-xl">
                 {identity.title}
               </h1>
-              <p className="animate-fade-up-delay-2 mt-4 max-w-xl text-base leading-relaxed text-ink-soft sm:mt-5 sm:text-lg">
+              <p className="animate-fade-up-delay-2 mt-3 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
                 Specialized in distributed systems, data engineering, and scalable
                 APIs — with hands-on experience across AWS and GCP.
               </p>
-              <div className="animate-fade-up-delay-3 mt-7 flex flex-wrap items-center gap-3 sm:mt-9 sm:gap-4">
+              <div className="animate-fade-up-delay-3 mt-6 flex flex-wrap items-center gap-3">
                 <a
                   href="#contact"
                   className="inline-flex items-center justify-center gap-2 border border-accent bg-accent px-5 py-2.5 text-sm font-semibold text-white transition hover:border-accent-deep hover:bg-accent-deep sm:px-6 sm:py-3"
