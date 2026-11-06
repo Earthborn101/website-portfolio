@@ -99,7 +99,7 @@ function App() {
             aria-hidden="true"
           />
           <div
-            className="pointer-events-none absolute bottom-0 right-0 h-[50%] w-[42%] max-w-xs sm:h-[55%] sm:w-[36%] sm:max-w-sm lg:max-w-md"
+            className="pointer-events-none absolute inset-y-0 right-0 w-[42%] max-w-xs sm:w-[36%] sm:max-w-sm lg:max-w-md"
             aria-hidden="true"
           >
             <img
