@@ -360,7 +360,7 @@ function App() {
           <p>
             © {new Date().getFullYear()} {identity.fullName}
           </p>
-          <p>Senior Software Engineer · Elixir & Phoenix</p>
+          <p>Senior Software Engineer · Backend & Distributed Systems</p>
         </div>
       </footer>
     </div>

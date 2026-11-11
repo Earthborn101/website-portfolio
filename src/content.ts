@@ -1,7 +1,7 @@
 export const identity = {
   name: 'Ryan Adiao',
   fullName: 'Ryan Christopher D. Adiao',
-  title: 'Senior Software Engineer | Elixir, Phoenix, Distributed Systems',
+  title: 'Senior Software Engineer | Backend Engineering, Distributed Systems, Data Engineering',
   location: 'Las Piñas City, Philippines',
   email: 'ryan.adiao1994@gmail.com',
   linkedIn: 'https://linkedin.com/in/ryan-christopher-adiao',
